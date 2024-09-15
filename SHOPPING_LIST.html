@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script src="../static/js/main.js"></script>
+    <title>GROCERY</title>
+</head>
+<body>
+<div class="img">
+<img src="park.jpg" alt="the dave logo">        
+</div>
+<br>
+<div id="check_items">
+    <form action="/check_items" method="POST">
+        {% for item in shopping_items%}
+        <input type="checkbox" name="check" id="{{item}}" value="{{item}}" onchange="check_me('{{ item }}')">
+        <label for="{{items}}" name="{{item}}">{{ item}}</label><br>
+        {%endfor%}
+    <input type="submit" value="CHECK ITEMS" id="remove_btn">
+    </form>
+<div id="remove_items">
+    <form action="/remove_items" method="POST">
+            {% for item in shopping_items%}
+            <input type="checkbox" name="check" id="{{item}}" value="{{}}">
+            <label for="{{items}}" name="{{item}}">{{ item}}
+        </label><br>
+        {%endfor%}
+        <input type="submit" value="REMOVE ITEMS" id="remove_btn">
+        </form>
+    </div>
+<div id="add_item">
+    <form action="/add_items" method="POST">
+            <select name="select_items">
+            {% for item in all_data%}
+            <option value="{{item}}">{{item}}</option>
+            {% endfor %}
+           <input type="submit" value="ADD ITEM" id="add_btn">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% set title = "Blog Posts" %}
+{% extends 'base.html' %}
+
+{% block content %}
+<ul>
+{% for post in posts %}
+<li><a href="{{ url_for('post', post_id=create-
+_user.id) }}">{{ post }}</a></li>
+
+db = SQLAlchemy()
+
+class BlogPost(db.Model):
+    id = db.mapped_column(db.Integer, primary_key=True)
+    title = db.mapped_column(db.String(100), nullable=False)
+    content = db.mapped_column(db.Text, nullable=False)
+    created_at = db.mapped_column(db.DateTime, default=datetime.utcnow)
+    author = db.mapped_column(db.String(100), nullable=False)
+
+
+    db.prepare(
+        `CREATE TABLE IF NOT EXISTS products (
+             id TEXT NOT NULL  PRIMARY KEY,
+             title TEXT NOT NULL UNIQUE,
+             description TEXT NOT NULL,
+             price FLOAT NOT NULL,
+             discountPercentage FLOAT NOT NULL,
+             rating FLOAT NOT NULL,
+             stock INT NOT NULL,
+             brand TEXT NOT NULL,
+             category TEXT NOT NULL,
+             thumbnail TEXT NOT NULL
+          )
+      `
+      ).run();
+      
+heading =("Name", "role","salary")
+@app.route('/home')
+def table():
+    return render_template('signup-name.html')
+
+
+
+        {% endfor %}
+    </ul>
+    <!--<div class="container blog-posts"></div>-->
+{% endblock %}

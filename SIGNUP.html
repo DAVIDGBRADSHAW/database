@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {# Set the `title` variable in each template that extends this one #}
+    <title>{{ DAVE }}</title>
+    <link rel="stylesheet" href="../static/css/another.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../css/signup.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/main.js') }}">
+    <link rel="icon" type="image/x-icon" href="LOGO-DAVE.JPG">
+    <link rel="shortcut icon" type="image/x-icon" href="LOGO-DAVE.JPG" />
+</head>
+<body>
+<div class="logo">
+    <img src="LOGO-DAVE.JPG" width="50">
+</div>
+    <header>
+<div class="links">
+        <a href="about.HTML">ABOUT</a>
+   <a href="services.html">SERVICES</a>
+    <a href="page2">page2</a>
+   <a href="STATS.HTML">STAT</a>
+    <a href="tandc.HTML">TERMS</a>
+    <a href="sqlSaved">DATA</a>
+
+   <a href="delete.HTML">Delete me</a>
+  <h1>SIGN UP with Flask</h1>
+    <nav class="navbar">
+      <ul>
+        <P>  SQL URL FOR</P>
+        <li><a href="{{ url_for('terms') }}">Terms and Conditions</a></li>
+<br>
+        <li><a href="{{ url_for('DELETE') }}">DELETE</a></li>
+<br>				
+        <li><a href="{{ url_for('stats') }}">Stats</a></li>
+            </ul>
+        </nav>
+</div>
+<br>
+<div class="middlehead">
+    <h1>   ENTER COMPETITION </h1>
+    <img src="ALL-BLACK.JPG" alt="ALL BLACKS">
+</div>
+<br>
+<br>
+<div class="question">
+<p>The first ever international 1871  england v scotland. TRUE or FALSE</p>
+<form action="{{ url_for('create_question') }}" method="POST"></form>
+<select>
+    <option value="0">Pick one ....</option>
+    <option value="1">FALSE</option>
+    <option value="2">TRUE</option>
+</select>
+</div>
+    <br>
+    <br>
+
+<div class="form-label">
+        <label for="text">First Name</label>
+        <input id="text"type="text"/>
+        <br>
+        <br>
+        <label for="text"> Surname</label>
+        <input id="text"type="text"/>
+        <br>
+        <br>
+        <label for="email">Email label</label>
+        <input id="email"type="email"/>
+        <br><br>
+        <hr>
+<br>
+    <select>
+        <br>
+        <br>
+        <option value="">Please select your gender / sex</option>    
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Perfer not to say</option>
+    </select>
+<br>
+<br>
+<p> If you are live abroard select OTHER, otherwise click IRELAND</p>
+<select>
+    <option value="1">IRELAND</option>
+    <option value="2">OTHER</option>
+</select>
+    <br>
+<hr>
+<p>Where did u hear about us </p>
+    <select>
+        <option value="0"></option>
+        <option value="1">Word of mouth</option>
+        <option value="2">Website / Streming  </option>
+        <option value="3">Radio</option>
+        <option value="4">TV</option> 
+        <option value="5">Bill Board</option>
+        <option value="6">Other</option>
+    </select>
+   <br>
+   <br>
+   <label class="label-inline" for="dataprotection">
+        <input type="checkbox" id="dataprotection"/>
+             I agree to the terms and conditions</label>
+<br>
+<br> 
+<label> Would you like to receive communtions about up coming events
+    <input type="checkbox" id="second">
+</label>
+<br>
+           
+    <p>    Are you willing to receice junk mail from us<input type="radio" class="label-inline">Yes</label></p>
+    <br>
+    <hr>
+    
+    <button>
+        <a href="thankyou.html">Please enter me</a>
+    </button>
+    <br>
+    <br>
+    <button class="btn btn-secondary" type="reset"> Clear</button>
+    <br>
+    <br>
+    <p> Sorry I MENT TO GO DELETE</p>
+        <a href="delete.html">Delete</a>
+<br>
+<hr>
+<br> 
+<div class="icon">
+<a href="http://intagram.com/"><img src="instagram.jpg" width="100">
+<br>  
+<br>
+<br><div class="top-box">   
+    <button class=""> <a href="#">Back to Top</a></button>
+    <input id="email" type="hidden" placeholder="browse"</input>
+    <br><br>
+    </body>
+</html>

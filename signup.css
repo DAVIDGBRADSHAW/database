@@ -1,0 +1,77 @@
+body {
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     line-height: 1.5;
+     background-color: #f5e5e5;
+     background-repeat: no-repeat;
+     background-position: 100px 100px;
+     background-size: cover;
+     background-attachment: fixed ;
+     height: 100vh;
+     padding: 1rem;
+}
+
+label {
+     display: block;
+}
+
+input[type="text"], 
+input[type="email"]{  
+     border:  1px solid #cccccc;
+     border-radius: 5px;
+     padding: 0.5em 0.7em;
+     transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type='text']:focus,
+input[type='email']:focus {
+     border-color: aqua;
+     outline: 0;
+     box-shadow: 0 0 0 4px rgb(204, 39, 39);
+}
+
+.btn {
+     border: 0;
+     padding: 0.5em 0.7em;
+     border-radius: 5px;
+     outline: 0;
+}
+.btn-primary {
+     background: rgb(43, 224, 224);
+}
+
+.btn-secondary {
+     background-color: #d53e3e;
+     color: aliceblue;
+}
+
+.form-group {
+     margin-bottom: 1em;
+}
+
+.form2 {
+     width: 50%;
+     padding: 2em;
+}
+
+.middlehead {
+     width: 550px;
+     height: 100px;
+     background-color: rgb(233, 228, 202);
+     transition: transform 4s;
+     text-align: right;
+     align-items: center;
+     justify-content3e;
+     padding: 10em;
+     font-family: 'Courier New', Courier, monospace;
+}: center;
+     border: #d53e
+
+.middlehead {
+     perspective: 200px;
+}
+
+.middlehead:hover .box {
+     transform: rotateY(45degs); 
+     transform-origin: 0 50%;
+}
+     

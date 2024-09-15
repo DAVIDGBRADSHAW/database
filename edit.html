@@ -1,0 +1,18 @@
+{% set title = "Edit Post" %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="{{ url_for('edit_action', post_id=post.id) }}" method="POST">
+        <input type="text" name="title" value="{{ post.lname }}" required>
+        <textarea name="content" required>{{ post.content }}</textarea>
+        <textarea name="content" required>{{ post.content }}</textarea><input type="text" name="title" value="{{ post.title }}" required>
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <!-- Add Delete Post Form -->
+    <form action="{{ url_for('delete_action', post_id=post.id) }}" method="POST">
+        <button type="submit" class="danger">Delete Post</button>
+    </form>
+{% endblock %}
